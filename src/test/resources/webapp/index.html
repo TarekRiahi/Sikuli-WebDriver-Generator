@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sikuli WebDriver Generator - Home</title>
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+        #multistate {
+            display: block;
+            padding: 4px;
+            font-family: arial;
+            font-size:x-small;
+            font-weight: bold;
+        }
+        .inactive {
+            background-color: #DDDDDD;
+            border: 1px solid #000000;
+        }
+        .active {
+            background-color: #FFAAAA;
+            border: 1px solid #DDDDDD;
+            color: #AAAAAA;
+        }
+    </style>
+    <script>
+        function changeStyle() {
+            if(document.getElementById("multistate").className == "active") {
+                document.getElementById("multistate").className = "inactive";
+            } else {
+                document.getElementById("multistate").className = "active";
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Welcome to Sikuli WebDriver Generator</h1>
+Lets try to see if you can find this picture, and also click on it?!? :)
+<br />
+<img src="img/cool-smiley.jpg" onclick="javascript:location.href='second-page.html'"/>
+<br />
+<br />
+<br />
+<button type="button" name="theButton" onclick="javascript:alert('You clicked!')">Click Me!</button>
+<br />
+<br />
+<br />
+<br />
+<button type="button" id="multistate" class="active" onclick="changeStyle()">Multistate button</button>
+<br />
+<br />
+<br />
+<br />
+</body>
+</html>
